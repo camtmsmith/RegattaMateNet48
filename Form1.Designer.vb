@@ -23,6 +23,7 @@ Partial Class FrmMain
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMain))
         Me.SerialPort1 = New System.IO.Ports.SerialPort(Me.components)
         Me.btnConnect = New System.Windows.Forms.Button()
         Me.lblConnect = New System.Windows.Forms.Label()
@@ -48,6 +49,9 @@ Partial Class FrmMain
         Me.lblConnect.TabIndex = 1
         Me.lblConnect.Text = "Control not connected"
         '
+        'TimerConnect
+        '
+        '
         'FrmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -55,6 +59,7 @@ Partial Class FrmMain
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.lblConnect)
         Me.Controls.Add(Me.btnConnect)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmMain"
         Me.Text = "Regatta Mate - Timing System"
         Me.ResumeLayout(False)
